@@ -1,0 +1,1 @@
+export {registerUserController} from './auth/post/auth.controller';
