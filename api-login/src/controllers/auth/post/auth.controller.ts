@@ -14,4 +14,14 @@ const registerUserController = async (req:Request, res:Response, next:NextFuncti
     }
 }
 
-export {registerUserController};
+const signInUserController = async (req:Request, res:Response, next:NextFunction) => {
+    try {
+        const user:User = req.body;
+        const token = await authService.signIn(user);
+        res.status(200).json({token});
+    }catch (e){
+        next(e);
+    }
+}
+
+export {registerUserController, signInUserController};
