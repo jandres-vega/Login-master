@@ -13,6 +13,8 @@ const config= {
     jwt_secret: process.env.JWT_SECRET as string,
     email_host: process.env.EMAIL_HOST,
     bcrypt_salt: process.env.BCRYPT_SALT,
+    google_client_id: process.env.GOOGLE_CLIENT_ID as string,
+    google_secret: process.env.GOOGLE_SECRET as string,
 };
 
 export {config};
