@@ -1,1 +1,1 @@
-export {registerUserController} from './auth/post/auth.controller';
+export {registerUserController, signInUserController} from './auth/post/auth.controller';
