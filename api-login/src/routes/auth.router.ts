@@ -11,8 +11,8 @@ router.get('/google', passport.authenticate('google', {scope: ['profile', 'email
 router.get('/google/callback',
     passport.authenticate('google', {failureRedirect: '/login'}),
     (req:Request, res:Response) => {
-        console.log(req.user);
-        res.redirect('http://localhost:3000');
+        console.log('Usuario autenticado:', req.user);
+        res.redirect('http://localhost:5173');
     }
 );
 
